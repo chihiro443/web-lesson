@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  color: blue;
+}
+
+label {
+  margin-right: 1em;
+}
+
+
+.flash {
+  background-color: lightgreen;
+  color: darkgreen;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+form .actions {
+  margin-top: .5em;
+}
+form.field {
+  margin-bottom: .5em
+}
+
+.errors {
+  color: darkred;
+  background-color: pink;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+table, th, td {
+  border: solid 1px black;
+}
+
+th, td {
+  padding: .5em 1em;
+}
+
+
+footer {
+  margin-top: 3em;
+}

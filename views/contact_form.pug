@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  
+  - if(err)
+    - const errors = err.errors
+    ul.errors
+      each error in errors
+        li= error.message
+  
+  form(action='/contacts', method='post')
+    input(type='hidden', name='id', value=contact.id)
+    div.field
+      label(for='name') 名前
+      input#name(type='text', name='name', value=contact.name)
+
+    div.field
+      label(for='email') Email
+      input#email(type='text', name='email', value=contact.email)
+
+
+    div.field   
+      label(for='category') カテゴリ
+      select#category(type='text', name='categoryId')
+        option(value="", selected=contact.categoryId === null) なし
+        each category in categories
+          option(value=category.id, selected=contact.categoryId === category.id)=category.name
+    div.actions
+      input(type='submit', value='送信')  

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  
+  - if(err)
+    - const errors = err.errors
+    ul.errors
+      each error in errors
+        li= error.message
+  
+  form(action='/categories', method='post')
+    input(type='hidden', name='id', value=category.id)
+    div.field
+      label(for='name') 名前
+      input#name(type='text', name='name', value=category.name)
+
+    div.actions
+      input(type='submit', value='送信')  

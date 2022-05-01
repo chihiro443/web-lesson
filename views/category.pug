@@ -1,0 +1,10 @@
+extends layout
+block content
+  h1=`カテゴリ ${category.name}`
+
+  a(href=`/categories/${category.id}/edit`) 編集
+  form(action=`/categories/${category.id}/delete`, method="post")
+    input(type="submit", value="削除")
+
+  include _contact_table
+
